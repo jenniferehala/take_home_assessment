@@ -1,6 +1,5 @@
 import React from 'react'
 import '../components/components.css'
-import { useState } from 'react'
 
 const Header = () => {
 
@@ -8,7 +7,7 @@ const Header = () => {
     return (
         <div >
             <div className='header'>
-                <h1>hello im the header</h1>
+                <p>Header</p>
             </div>
 
         </div>

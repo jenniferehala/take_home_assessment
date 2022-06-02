@@ -65,7 +65,7 @@ const Main = () => {
                         {/* Begin Menu Pane */}
                         <div className="menu-box">
                             <div className='item'>
-                                Header
+                                <p>Header</p>
                             </div>
                             <div className="item">
                                 <p>Footer</p>
@@ -116,7 +116,7 @@ const Main = () => {
                                         }}
                                         onClick={() => window.location.reload(false)}
                                     >
-                                        Reset
+                                        Reset Button
                                     </button>
                                     <button
                                         type="submit"
@@ -126,7 +126,7 @@ const Main = () => {
                                             color: isActive2 ? 'white' : '',
                                         }}
                                     >
-                                        Submit
+                                        Submit Button
                                     </button>
                                 </div>
                             </form>

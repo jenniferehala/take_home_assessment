@@ -8,13 +8,14 @@ import { useState } from 'react'
 import './App.css';
 
 function App() {
-  const [isActive, setIsActive] = useState(false);
 
-  const handleClick = () => {
-    // 👇️ toggle
-    setIsActive(true);
+  // const [isActive, setIsActive] = useState(false);
+  // const handleClick = () => {
+  //   // 👇️ toggle
+  //   setIsActive(true);
 
-  };
+  // };
+
   return (
     <div className="App">
 

@@ -1,12 +1,12 @@
 .header {
-  background-color: gold;
+  background-color: rgb(255, 229, 153);
   width: 100%;
   min-height: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
+  outline: black 1px solid;
 }
 
 .footer {
@@ -14,5 +14,9 @@
   bottom: 0;
   right: 0;
   height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: lightgreen;
+  outline: black 1px solid;
 }

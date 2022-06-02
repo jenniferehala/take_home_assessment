@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost/reg_schema", {
+mongoose.connect("mongodb://localhost/registration_schema", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 
