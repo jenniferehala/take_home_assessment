@@ -9,12 +9,20 @@ import './App.css';
 
 function App() {
 
-  // const [isActive, setIsActive] = useState(false);
-  // const handleClick = () => {
-  //   // 👇️ toggle
-  //   setIsActive(true);
+  const [header, setHeader] = useState(false);
+  const [footer, setFooter] = useState(false);
 
-  // };
+  function handleHeader() {
+    setHeader(true);
+    console.log(header)
+    console.log("this toggle for header worked from parent")
+  }
+
+  function handleFooter() {
+    setFooter(true);
+    console.log(footer)
+    console.log("this toggle for footer worked from parent")
+  }
 
   return (
     <div className="App">
@@ -22,9 +30,9 @@ function App() {
       <Switch>
 
         <Route exact path="/">
-          <Header />
-          <Main />
-          <Footer />
+          <Header header={header} />
+          <Main header={header} footer={footer} onToggleHeader={handleHeader} onToggleFooter={handleFooter} />
+          <Footer footer={footer} />
         </Route>
 
 

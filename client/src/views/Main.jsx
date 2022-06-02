@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { useHistory } from 'react-router-dom'
 
 
-const Main = () => {
+const Main = ({ header, footer, onToggleHeader, onToggleFooter }) => {
     const history = useHistory();
     const [form, setForm] = useState({
         fname: "",
@@ -18,18 +18,6 @@ const Main = () => {
     const [isActive1, setIsActive1] = useState(false);
     const [isActive2, setIsActive2] = useState(false);
 
-    const handleClick1 = () => {
-        // 👇️ toggle
-        setIsActive1(true);
-
-    };
-    const handleClick2 = () => {
-        // 👇️ toggle
-        setIsActive2(true);
-
-    };
-
-
     const onSubmitHandler = (event) => {
         event.preventDefault();
         console.log(form)
@@ -37,7 +25,6 @@ const Main = () => {
             .then(res => {
                 console.log(res.data.results);
                 history.push("/submitted-form")
-
             })
             .catch(err => {
                 console.log(err.response.data.err.errors);
@@ -53,6 +40,14 @@ const Main = () => {
         })
     }
 
+    const handleClick1 = () => {
+        setIsActive1(true);
+    };
+    const handleClick2 = () => {
+        setIsActive2(true);
+
+    };
+
     return (
         <>
             {/* Begin of Wrapper */}
@@ -64,10 +59,10 @@ const Main = () => {
 
                         {/* Begin Menu Pane */}
                         <div className="menu-box">
-                            <div className='item'>
+                            <div className='item' onClick={onToggleHeader} >
                                 <p>Header</p>
                             </div>
-                            <div className="item">
+                            <div className="item" onClick={onToggleFooter}>
                                 <p>Footer</p>
                             </div>
                             <div className="item" onClick={handleClick1}>

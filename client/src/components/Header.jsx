@@ -1,12 +1,12 @@
 import React from 'react'
 import '../components/components.css'
 
-const Header = () => {
+const Header = (props) => {
 
 
     return (
         <div >
-            <div className='header'>
+            <div className={props.header ? 'header2' : 'header1'}>
                 <p>Header</p>
             </div>
 

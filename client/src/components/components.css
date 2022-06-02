@@ -1,4 +1,4 @@
-.header {
+.header1 {
   background-color: rgb(255, 229, 153);
   width: 100%;
   min-height: 100px;
@@ -9,7 +9,18 @@
   outline: black 1px solid;
 }
 
-.footer {
+.header2 {
+  background-color: red;
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  outline: black 1px solid;
+}
+
+.footer1 {
   left: 0;
   bottom: 0;
   right: 0;
@@ -18,5 +29,17 @@
   justify-content: center;
   align-items: center;
   background: lightgreen;
+  outline: black 1px solid;
+}
+
+.footer2 {
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: purple;
   outline: black 1px solid;
 }
